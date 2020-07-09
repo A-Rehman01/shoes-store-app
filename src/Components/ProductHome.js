@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
         border: '2px solid #9aa6e2',
         boxShadow: '2px 2px 3px #9aa6e2',
         textAlign: 'center',
+        background:'#f4f5f6',
         color: theme.palette.text.secondary,
     },
 }));
