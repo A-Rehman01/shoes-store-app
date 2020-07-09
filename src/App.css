@@ -25,7 +25,6 @@
     font-weight: bolder;
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 10px;
 }
 
 /* ===================Homeend=================== */
@@ -33,6 +32,8 @@
 
 /* ===================ProductStrt=================== */
 .shoeimg{
+    width: 200px;
+    height: 200px;
     display: flex;
     justify-content: center;
     
@@ -41,8 +42,6 @@
     font-family: 'PT Serif', serif;
      font-weight: bold;
     color: black;
-    text-align: center;
-    font-size: 20px;
 }
 .Shoelink{
     text-decoration: none;

@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
     },
     paper: {
         margin: '10px',
+        padding: '10px',
         border: '2px solid #9aa6e2',
         boxShadow: '2px 2px 3px #9aa6e2',
         textAlign: 'center',
@@ -33,15 +34,14 @@ function ProductHome() {
                         const tempShoe = Shoe[Objpro];       //name se particular obj le sakte he Shoe[Objpro]=Shoe.Objpro 
                         return (
                             <Grid item xs={12} sm={4} key={index}>
-                                <p className="imagename">
+                                <Paper className={classes.paper}>
+                                    
+                                    <p className="imagename">
                                     <img src={Nikeimg} width={35} height={40} alt="nikelogo"></img>
                                         {tempShoe.name}
                                         </p>
-                                <Paper className={classes.paper}>
-                                    
-                                    
                                     <Link to={Objpro} className="Shoelink">
-                                        <img src={tempShoe.img} className="shoeimg img-fluid" alt="ShoesImage" />
+                                        <img src={tempShoe.img} className="shoeimg" alt="ShoesImage" />
                                     </Link>
                                 </Paper>
                             </Grid>
