@@ -18,6 +18,8 @@ import CardGiftcardIcon from '@material-ui/icons/CardGiftcard';
 import HomeIcon from '@material-ui/icons/Home';
 
 import { Link } from 'react-router-dom';
+import Logo from './../images/nikewhite.png'
+
 const useStyles = makeStyles((theme) => ({
     grow: {
         flexGrow: 1,
@@ -84,7 +86,7 @@ export default function Navbar() {
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-    
+
 
     const handleMobileMenuClose = () => {
         setMobileMoreAnchorEl(null);
@@ -127,15 +129,15 @@ export default function Navbar() {
             onClose={handleMobileMenuClose}
         >
             <MenuItem>
-                <IconButton  color="inherit">
-                <Link to='/'><HomeIcon /></Link>    
+                <IconButton color="inherit">
+                    <Link to='/'><HomeIcon /></Link>
                 </IconButton>
                 <Link to='/' className="mobicontext">Home</Link>
             </MenuItem>
 
             <MenuItem>
-                <IconButton  color="inherit">
-                <Link to='/product'><CardGiftcardIcon  /></Link>
+                <IconButton color="inherit">
+                    <Link to='/product'><CardGiftcardIcon /></Link>
                 </IconButton>
                 <Link to='/product' className="mobicontext">Product</Link>
             </MenuItem>
@@ -157,19 +159,19 @@ export default function Navbar() {
             <AppBar position="static">
                 <Toolbar>
 
-                    <Typography className={classes.title} variant="h6" noWrap>
-                        Shoes_Store
+                    <Typography className={classes.title} variant="h6" style={{ fontWeight: 'bolder', fontFamily: 'PT Serif' }} noWrap>
+                    <img src={Logo} height={35} width={40} alt="nikelogo"></img>    BLUE SHOE
                     </Typography>
 
                     <div className={classes.grow} />
                     <div className={classes.sectionDesktop}>
 
                         <IconButton aria-label="show 4 new mails" color="inherit">
-                           <Link to='/'> <HomeIcon className="iconDesktop"  style={{fontSize:'27'}}/> </Link>
-                            
+                            <Link to='/'> <HomeIcon className="iconDesktop" style={{ fontSize: '27' }} /> </Link>
                         </IconButton>
+
                         <IconButton aria-label="show 4 new mails" color="inherit">
-                            <Link to='/product'> <CardGiftcardIcon className="iconDesktop" style={{fontSize:'27'}} /></Link>
+                            <Link to='/product'> <CardGiftcardIcon className="iconDesktop" style={{ fontSize: '27' }} /></Link>
                         </IconButton>
 
                         {/* <IconButton aria-label="show 17 new notifications" color="inherit">
@@ -194,6 +196,6 @@ export default function Navbar() {
             </AppBar>
             {renderMobileMenu}
             {renderMenu}
-        </div>
+        </div >
     );
 }

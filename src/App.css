@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
 
 /* ===================Navbarstrt=================== */
 .iconDesktop{
@@ -29,4 +31,43 @@
 
 
 /* ===================ProductStrt=================== */
+.shoeimg{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    
+}
+.imagename{
+    font-family: 'PT Serif', serif;
+     font-weight: bold;
+    color: black;
+}
+.Shoelink{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+.ProductHome{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+ul{
+    list-style: none;
+}
+.selecedimg{
+    margin-top: 20px;
+    width: 270px;
+    border: 2px solid #9aa6e2;
+    box-shadow: 2px 2px 3px #9aa6e2;
+}
+.selectedimgtxt{
+    text-align: center;
+    font-family: 'PT Serif', serif;
+     font-weight: bold;
+    color: black;
+}
 /* ===================Productend=================== */
