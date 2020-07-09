@@ -30,7 +30,7 @@ jobs:
       with:
         cmd: install 
 
-    - name: Build covid-19 App
+    - name: Build Shoes-Store-App
       run: yarn build
       
     - name: Install Surge
