@@ -1,0 +1,32 @@
+
+/* ===================Navbarstrt=================== */
+.iconDesktop{
+    color: white;
+}
+.mobicontext{
+    text-decoration: none;
+    font-weight: bold;
+}
+/* ===================Navbarend=================== */
+
+
+/* ===================Homestrt=================== */
+
+.Shoesimages{
+    margin-top: 10px;
+    width: 700px;
+}
+.heading{
+    color: #5262b6;
+    text-shadow: 2px 2px 4px black;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* ===================Homeend=================== */
+
+
+/* ===================ProductStrt=================== */
+/* ===================Productend=================== */
