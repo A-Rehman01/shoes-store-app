@@ -130,16 +130,14 @@ export default function Navbar() {
         >
             <MenuItem>
                 <IconButton color="inherit">
-                    <Link to='/'><HomeIcon /></Link>
+                    <Link to='/'><HomeIcon /> <span style={{ fontSize: '19px', marginRight: '5px'  }}>Home</span></Link>
                 </IconButton>
-                <Link to='/' className="mobicontext">Home</Link>
             </MenuItem>
 
             <MenuItem>
                 <IconButton color="inherit">
-                    <Link to='/product'><CardGiftcardIcon /></Link>
+                    <Link to='/product'><CardGiftcardIcon /> <span style={{ fontSize: '19px', marginRight: '5px' }}> Product </span></Link>
                 </IconButton>
-                <Link to='/product' className="mobicontext">Product</Link>
             </MenuItem>
 
             {/* <MenuItem>
@@ -160,7 +158,7 @@ export default function Navbar() {
                 <Toolbar>
 
                     <Typography className={classes.title} variant="h6" style={{ fontWeight: 'bolder', fontFamily: 'PT Serif' }} noWrap>
-                    <img src={Logo} height={35} width={40} alt="nikelogo"></img>    BLUE SHOE
+                        <img src={Logo} height={35} width={40} alt="nikelogo"></img>    BLUE SHOE
                     </Typography>
 
                     <div className={classes.grow} />
