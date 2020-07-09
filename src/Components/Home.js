@@ -1,5 +1,6 @@
 import React from 'react';
-import shoe2 from './../images/shoe2.jpg'
+
+
 function Home() {
     return (
         <div>
