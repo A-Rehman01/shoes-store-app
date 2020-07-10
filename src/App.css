@@ -34,15 +34,34 @@
 .shoeimg{
     width: 200px;
     height: 200px;
-    display: flex;
-    justify-content: center;
-    
+    display: flex;   
 }
 .imagename{
     font-family: 'PT Serif', serif;
      font-weight: bold;
     color: black;
-    font-size: 18px;
+    font-size: 15px;
+}
+.priceshoe{
+    color: red;
+    font-family: 'PT Serif', serif;
+     font-weight: bold;
+    font-size: 17px;
+    text-align: left;
+}
+.btnchart{
+    font-family: 'PT Serif', serif;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+}
+.btnchart:hover{
+    background-color: blue;
 }
 .Shoelink{
     text-decoration: none;
@@ -53,22 +72,37 @@
 }
 .ProductHome{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
 ul{
     list-style: none;
 }
+.Productdetail{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    
+}
 .selecedimg{
-    margin-top: 20px;
     width: 270px;
     border: 2px solid #9aa6e2;
     box-shadow: 2px 2px 3px #9aa6e2;
 }
 .selectedimgtxt{
-    text-align: center;
     font-family: 'PT Serif', serif;
      font-weight: bold;
     color: black;
+    width: 60%;
+    padding: 20px;
+    margin-left: 20px;
 }
+@media only screen and (max-width: 800px) {
+    .selectedimgtxt {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
 /* ===================Productend=================== */

@@ -5,7 +5,7 @@ function product (){
     
     return(
         <div>
-            <h1 className="heading">Our Products</h1>
+            <h3 className="heading">Our Products</h3>
             {/* hook for child routs */}
             <Outlet/>
         </div>

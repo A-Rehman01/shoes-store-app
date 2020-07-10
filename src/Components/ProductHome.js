@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
         border: '2px solid #9aa6e2',
         boxShadow: '2px 2px 3px #9aa6e2',
         textAlign: 'center',
-        background:'#f4f5f6',
+        background: '#f4f5f6',
         color: theme.palette.text.secondary,
     },
 }));
@@ -28,7 +28,7 @@ function ProductHome() {
     console.log(Shoe)
     return (
         <div className={classes.root} >
-                        
+
             <div className="ProductHome">
                 {
                     Object.keys(Shoe).map((Objpro, index) => {     //Object.keys array return kare ga name ki
@@ -36,14 +36,21 @@ function ProductHome() {
                         return (
                             <Grid item xs={12} sm={4} key={index}>
                                 <Paper className={classes.paper}>
-                                    
+
                                     <p className="imagename">
-                                    <img src={Nikeimg} width={35} height={40} alt="nikelogo"></img>
+                                        <img src={Nikeimg} width={35} height={40} alt="nikelogo"></img>
                                         {tempShoe.name}
-                                        </p>
+
+                                    </p>
                                     <Link to={Objpro} className="Shoelink">
                                         <img src={tempShoe.img} className="shoeimg" alt="ShoesImage" />
                                     </Link>
+                                    <p className="priceshoe"> <span style={{paddingLeft:'4px'}}> RS: {tempShoe.Price} </span>
+                                        <span>
+                                            <button className="btnchart">Add to Chart</button>
+                                        </span>
+                                    </p>
+
                                 </Paper>
                             </Grid>
                         )
