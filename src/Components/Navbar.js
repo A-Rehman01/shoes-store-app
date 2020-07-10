@@ -140,6 +140,13 @@ export default function Navbar() {
                 </IconButton>
             </MenuItem>
 
+            
+            <MenuItem>
+                <IconButton color="inherit">
+                    <Link to='/chart'><ShoppingCartIcon /> <span style={{ fontSize: '19px', marginRight: '5px' }}> Cart </span></Link>
+                </IconButton>
+            </MenuItem>
+
             {/* <MenuItem>
                 <IconButton aria-label="show 11 new notifications" color="inherit">
                     <Badge badgeContent={11} color="secondary">

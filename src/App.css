@@ -112,7 +112,7 @@ ul{
     display: flex;
     flex-wrap: wrap;
     margin-top: 10px;
-    /* justify-content: center; */
+    justify-content: space-between;
 }
 .imgdiv{
     margin: 10px;
@@ -120,9 +120,9 @@ ul{
 }
 .txtdiv{
     margin: 10px;
-    /* text-align: right; */
-    margin-right: 40px;
-    float: right;
+    text-align: center;
+    /* margin-right: 40px; */
+    
 }
 .chartimg{
     width: 130px;
