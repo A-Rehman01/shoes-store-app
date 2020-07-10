@@ -24,6 +24,9 @@ const Reduser = ((State, action) => {
 
         case 'ADDQUANTITY':
             State.transection[State.transection.findIndex(Objstate => Objstate.id === action.payload.id)].Quantity+=1;
+
+            State.transection[State.transection.findIndex(Objstate => Objstate.id === action.payload.id)].Price
+            +=action.payload.Price;
             return {
                 ...State,
                 transection: [...State.transection],
@@ -31,6 +34,7 @@ const Reduser = ((State, action) => {
 
         case 'DECQUANTITY':
             State.transection[State.transection.findIndex(Objstate => Objstate.id === action.payload.id)].Quantity--
+            
             return {
                 ...State,
                 transection: [...State.transection],
