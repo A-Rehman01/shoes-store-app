@@ -16,7 +16,7 @@ import Menu from '@material-ui/core/Menu';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import CardGiftcardIcon from '@material-ui/icons/CardGiftcard';
 import HomeIcon from '@material-ui/icons/Home';
-
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { Link } from 'react-router-dom';
 import Logo from './../images/nikewhite.png'
 
@@ -172,6 +172,10 @@ export default function Navbar() {
                             <Link to='/product'> <CardGiftcardIcon className="iconDesktop" style={{ fontSize: '27' }} /></Link>
                         </IconButton>
 
+                        <IconButton aria-label="show 4 new mails" color="inherit">
+                            <Link to='/chart'> <ShoppingCartIcon className="iconDesktop" style={{ fontSize: '27' }} /></Link>
+                        </IconButton>
+                        
                         {/* <IconButton aria-label="show 17 new notifications" color="inherit">
               <Badge badgeContent={17} color="secondary">
                 <NotificationsIcon />

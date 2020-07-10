@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Shoe from './../shoe.json';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Nikeimg from './../images/nike.png'
+import { Context } from './../GlobalContext/Context';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -23,18 +24,23 @@ const useStyles = makeStyles((theme) => ({
 
 
 function ProductHome() {
-    const classes = useStyles();
 
-    console.log(Shoe)
+    const classes = useStyles();
+    const { Additems } = useContext(Context);
+    // console.log(Additems)
+
+    // console.log(item)
+    // Additems(item);
+
     return (
         <div className={classes.root} >
 
             <div className="ProductHome">
                 {
-                    Object.keys(Shoe).map((Objpro, index) => {     //Object.keys array return kare ga name ki
+                    Object.keys(Shoe).map((Objpro) => {     //Object.keys array return kare ga name ki
                         const tempShoe = Shoe[Objpro];       //name se particular obj le sakte he Shoe[Objpro]=Shoe.Objpro 
                         return (
-                            <Grid item xs={12} sm={4} key={index}>
+                            <Grid item xs={12} sm={4} key={Objpro}>
                                 <Paper className={classes.paper}>
 
                                     <p className="imagename">
@@ -45,9 +51,13 @@ function ProductHome() {
                                     <Link to={Objpro} className="Shoelink">
                                         <img src={tempShoe.img} className="shoeimg" alt="ShoesImage" />
                                     </Link>
-                                    <p className="priceshoe"> <span style={{paddingLeft:'4px'}}> RS: {tempShoe.Price} </span>
+                                    <p className="priceshoe"> <span style={{ paddingLeft: '4px' }}> RS: {tempShoe.Price} </span>
                                         <span>
-                                            <button className="btnchart">Add to Chart</button>
+
+                                            <button onClick={() => {
+                                                Additems(tempShoe)
+                                            }} className="btnchart">Add to Cart</button>
+
                                         </span>
                                     </p>
 
