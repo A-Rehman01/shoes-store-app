@@ -2,13 +2,13 @@ const Reduser = ((State, action) => {
 
     switch (action.type) {
         case 'ADD':
-            if( State.transection[State.transection.findIndex(Objstate => Objstate.id === action.payload.id)]){   
+            if (State.transection[State.transection.findIndex(Objstate => Objstate.id === action.payload.id)]) {
                 return {
                     ...State,
                     transection: [...State.transection]
                 }
             }
-            else{
+            else {
                 return {
                     ...State,
                     transection: [action.payload, ...State.transection]
@@ -23,18 +23,21 @@ const Reduser = ((State, action) => {
             }
 
         case 'ADDQUANTITY':
-            State.transection[State.transection.findIndex(Objstate => Objstate.id === action.payload.id)].Quantity+=1;
+            State.transection[State.transection.findIndex(Objstate => Objstate.id === action.payload.id)].Quantity += 1;
+            State.transection[State.transection.findIndex(Objstate => Objstate.id === action.payload.id)].totalPrice =
+                State.transection[State.transection.findIndex(Objstate => Objstate.id === action.payload.id)].totalPrice + action.payload.Price;
 
-            State.transection[State.transection.findIndex(Objstate => Objstate.id === action.payload.id)].Price
-            +=action.payload.Price;
             return {
                 ...State,
                 transection: [...State.transection],
             }
 
         case 'DECQUANTITY':
-            State.transection[State.transection.findIndex(Objstate => Objstate.id === action.payload.id)].Quantity--
-            
+            State.transection[State.transection.findIndex(Objstate => Objstate.id === action.payload.id)].Quantity--;
+
+            State.transection[State.transection.findIndex(Objstate => Objstate.id === action.payload.id)].totalPrice =
+                State.transection[State.transection.findIndex(Objstate => Objstate.id === action.payload.id)].totalPrice - action.payload.Price;
+
             return {
                 ...State,
                 transection: [...State.transection],

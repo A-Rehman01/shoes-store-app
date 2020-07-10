@@ -116,12 +116,12 @@ ul{
 }
 .imgdiv{
     margin: 10px;
-    margin-left: 40px;
+    margin-left: 10px;
 }
 .txtdiv{
     margin: 10px;
-    text-align: center;
-    /* margin-right: 40px; */
+    text-align: right;
+    margin-right: 10px;
     
 }
 .chartimg{
