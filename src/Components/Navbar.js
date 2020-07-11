@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 // import InputBase from '@material-ui/core/InputBase';
-// import Badge from '@material-ui/core/Badge';
+import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 // import MenuIcon from '@material-ui/icons/Menu';
@@ -19,6 +19,8 @@ import HomeIcon from '@material-ui/icons/Home';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { Link } from 'react-router-dom';
 import Logo from './../images/nikewhite.png'
+
+import {Context} from './../GlobalContext/Context';
 
 const useStyles = makeStyles((theme) => ({
     grow: {
@@ -86,8 +88,8 @@ export default function Navbar() {
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-
-
+    const { alert } = useContext(Context);
+    console.log(alert)
     const handleMobileMenuClose = () => {
         setMobileMoreAnchorEl(null);
     };
@@ -130,7 +132,7 @@ export default function Navbar() {
         >
             <MenuItem>
                 <IconButton color="inherit">
-                    <Link to='/'><HomeIcon /> <span style={{ fontSize: '19px', marginRight: '5px'  }}>Home</span></Link>
+                    <Link to='/'><HomeIcon /> <span style={{ fontSize: '19px', marginRight: '5px' }}>Home</span></Link>
                 </IconButton>
             </MenuItem>
 
@@ -140,21 +142,13 @@ export default function Navbar() {
                 </IconButton>
             </MenuItem>
 
-            
             <MenuItem>
-                <IconButton color="inherit">
-                    <Link to='/chart'><ShoppingCartIcon /> <span style={{ fontSize: '19px', marginRight: '5px' }}> Cart </span></Link>
-                </IconButton>
-            </MenuItem>
-
-            {/* <MenuItem>
                 <IconButton aria-label="show 11 new notifications" color="inherit">
-                    <Badge badgeContent={11} color="secondary">
-                        <NotificationsIcon />
+                    <Badge badgeContent={alert} color="secondary">
+                    <Link to='/chart'><ShoppingCartIcon /> <span style={{ fontSize: '19px', marginRight: '5px' }}> Cart </span></Link>
                     </Badge>
                 </IconButton>
-                <p>Product</p>
-            </MenuItem> */}
+            </MenuItem>
 
         </Menu>
     );
@@ -179,15 +173,12 @@ export default function Navbar() {
                             <Link to='/product'> <CardGiftcardIcon className="iconDesktop" style={{ fontSize: '27' }} /></Link>
                         </IconButton>
 
-                        <IconButton aria-label="show 4 new mails" color="inherit">
+
+                        <IconButton aria-label="show 17 new notifications" color="inherit">
+                            <Badge badgeContent={alert} color="secondary">
                             <Link to='/chart'> <ShoppingCartIcon className="iconDesktop" style={{ fontSize: '27' }} /></Link>
+                            </Badge>
                         </IconButton>
-                        
-                        {/* <IconButton aria-label="show 17 new notifications" color="inherit">
-              <Badge badgeContent={17} color="secondary">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton> */}
 
                     </div>
                     <div className={classes.sectionMobile}>

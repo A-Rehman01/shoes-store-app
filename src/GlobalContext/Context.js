@@ -1,4 +1,4 @@
-import React, { createContext,  useReducer } from 'react'
+import React, { createContext,  useReducer,useState } from 'react'
 import Reduser from './Reduser';
 
 const initialStete = {
@@ -9,7 +9,7 @@ export const Context = createContext(initialStete);
 
 function ContextProvider({ children }) {
     const [State, dispatch] = useReducer(Reduser, initialStete);
-
+    const [alert ,Setalert] = useState(0);
     //additems
     function Additems(newitem) {
         dispatch(
@@ -43,13 +43,21 @@ function ContextProvider({ children }) {
             payload: item
         })
     }
-
+    function Checkout(){
+        dispatch({
+            type:'CHECKOUT',
+            payload: ''
+        })
+    }
+    function Alert(value){
+            Setalert(value)
+    }
     return (
         <Context.Provider
             value={
 
-                { initialStete: State.transection, Additems, deleteitems,incQuantity,decQuantity }
-
+                { initialStete: State.transection,Alert ,Additems, deleteitems,incQuantity,decQuantity ,Checkout,alert}
+                
             }>
             {children}
         </Context.Provider>

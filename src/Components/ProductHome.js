@@ -26,11 +26,12 @@ const useStyles = makeStyles((theme) => ({
 function ProductHome() {
 
     const classes = useStyles();
-    const { Additems } = useContext(Context);
+    const { Additems,alert,Alert } = useContext(Context);
     // console.log(Additems)
 
-    // console.log(item)
+    console.log(alert)
     // Additems(item);
+    
 
     return (
         <div className={classes.root} >
@@ -55,7 +56,8 @@ function ProductHome() {
                                         <span>
 
                                             <button onClick={() => {
-                                                Additems(tempShoe)
+                                                Additems(tempShoe) 
+                                                Alert(alert+1)
                                             }} className="btnchart">Add to Cart</button>
 
                                         </span>

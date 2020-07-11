@@ -10,6 +10,8 @@ import ProductHome from './Components/ProductHome'
 import Productdetail from './Components/Productdetail';
 import Chart from './Components/Chart';
 import ContextProvider from './GlobalContext/Context';
+import Error from './Components/Error';
+import Complete from './Components/Complete';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
             <Route path='/:productid' element={<Productdetail />}></Route>
           </Route>
           <Route path='/chart' element={<Chart />}></Route>
+          <Route path='/chart/complete' element={<Complete/>}></Route>
+          <Route path='*' element={<Error/>}></Route>
         </Routes>
       </ContextProvider>
     </div>

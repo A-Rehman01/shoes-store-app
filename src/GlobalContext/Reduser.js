@@ -43,7 +43,12 @@ const Reduser = ((State, action) => {
                 transection: [...State.transection],
             }
 
-        
+        case 'CHECKOUT':
+            
+            return {
+                transection:[]
+            }
+
         default:
             return State;
     }
