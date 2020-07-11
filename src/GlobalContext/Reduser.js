@@ -43,14 +43,7 @@ const Reduser = ((State, action) => {
                 transection: [...State.transection],
             }
 
-        // case 'ZEROQUANTITY':
-        //     State.transection[State.transection.findIndex(Obj => Obj.id === action.payload.id)].totalPrice =
-        //         State.transection[State.transection.findIndex(Obj => Obj.id === action.payload.id)].totalPrice + action.payload.Price;
-           
-        //         return {
-        //             ...State,
-        //             transection: State.transection.filter((Objstate) => { return Objstate.id !== action.payload.id })
-        //         }
+        
         default:
             return State;
     }

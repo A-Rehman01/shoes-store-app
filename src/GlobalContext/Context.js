@@ -44,12 +44,6 @@ function ContextProvider({ children }) {
         })
     }
 
-    // function ZeroQuantity(item){
-    //     dispatch({
-    //         type:'ZEROQUANTITY',
-    //         payload: item
-    //     })
-    }
     return (
         <Context.Provider
             value={
