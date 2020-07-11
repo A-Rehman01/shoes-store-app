@@ -1,4 +1,6 @@
 import React from 'react';
+import AlertFakedata from './AlertFakedata';
+
 
 
 function Home() {
@@ -8,6 +10,7 @@ function Home() {
             <div className="imagediv">
                 <img src='https://source.unsplash.com/1600x900/?shoes' alt="Shoes Images" class="rounded mx-auto d-block img-fluid Shoesimages"></img>
             </div>
+            <AlertFakedata/>
         </div>
     )
 }

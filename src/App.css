@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
 
-
+.alert{
+    text-align: center;
+    font-family: 'PT Serif', serif;
+    font-weight: bold;
+    margin-top: 40px;
+}
 /* ===================Navbarstrt=================== */
 .iconDesktop{
     color: white;

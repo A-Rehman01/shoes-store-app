@@ -28,6 +28,8 @@ function App() {
           <Route path='/chart/complete' element={<Complete/>}></Route>
           <Route path='*' element={<Error/>}></Route>
         </Routes>
+        
+        
       </ContextProvider>
     </div>
   );
