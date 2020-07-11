@@ -1,15 +1,14 @@
 import React, { useContext } from 'react';
 import { Context } from './../GlobalContext/Context';
 import Paper from '@material-ui/core/Paper';
-
+import Total from './Total';
 import Nikeimg from './../images/nike.png'
-import { useNavigate } from 'react-router-dom';
 
 function Chart() {
-    let { initialStete, deleteitems, incQuantity, decQuantity,Checkout,Alert } = useContext(Context);
+    let { initialStete, deleteitems, incQuantity, decQuantity,Alert,alert } = useContext(Context);
     let amount = initialStete.map(Obj => { return parseInt(Obj.totalPrice) });
     let totalAmount = amount.reduce((item1, item2) => (item1 + item2), 0).toFixed(2);
-    let Navigate=useNavigate();
+    
 
     return (
         <div>
@@ -42,6 +41,7 @@ function Chart() {
                                 </p>
                                 <button onClick={() => {
                                     deleteitems(temp)
+                                    Alert(alert-1);
                                 }} className="btndel">Delete</button>
                             </div>
                                 
@@ -50,15 +50,7 @@ function Chart() {
                     );
                 })
             }
-            <p className="Totalamount">Rs: {totalAmount}
-            <br/>
-            <button onClick={()=>{
-                Navigate('/chart/complete')
-                Checkout();
-                Alert(0);
-            }} className="Purchase">Purchase</button>
-            </p>
-
+            <Total amount={totalAmount}></Total>
         </div>
     );
 }
