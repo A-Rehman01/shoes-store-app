@@ -27,12 +27,17 @@ function Chart() {
                                     <span style={{ fontWeight: 'bolder' }}> Single Piece </span>
                                     <span style={{ color: 'red', fontWeight: 'bolder' }}> Rs: {temp.Price}</span>
                                 </p>
-                                <p style={{  fontWeight: 'bolder' }}> Total Rs: {temp.totalPrice}</p>
+                                <p style={{ fontWeight: 'bolder' }}> Total Rs: {temp.totalPrice}</p>
                                 <p>
                                     <button onClick={() => incQuantity(temp)} className="add">+</button>
-                                    <button onClick={() => { if (temp.Quantity >= 1) { decQuantity(temp) } }} className="minus">-</button>
+                                    <button onClick={() => {
+                                        if (temp.Quantity > 1) { decQuantity(temp) }
+                                    }} className="minus">-</button>
 
                                     {temp.Quantity}
+                                    
+                                            
+                                    
                                 </p>
                                 <button onClick={() => {
                                     deleteitems(temp)
