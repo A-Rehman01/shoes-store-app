@@ -13,7 +13,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { Link } from 'react-router-dom';
 import Logo from './../images/nikewhite.png'
-
+import GitHubIcon from '@material-ui/icons/GitHub';
 import {Context} from './../GlobalContext/Context';
 
 const useStyles = makeStyles((theme) => ({
@@ -144,7 +144,13 @@ export default function Navbar() {
                 </IconButton>
             </MenuItem>
 
-        </Menu>
+            <MenuItem>
+                <IconButton color="inherit">
+                    <a href='https://github.com/A-Rehman01/shoes-store-app' target="_blank" rel="noopener noreferrer"><GitHubIcon /> <span style={{ fontSize: '19px', marginRight: '5px' }}> Github </span></a>
+                </IconButton>
+            </MenuItem>
+
+                    </Menu>
     );
 
     return (
@@ -174,7 +180,13 @@ export default function Navbar() {
                             </Badge>
                         </IconButton>
 
-                    </div>
+                        
+                        <IconButton aria-label="show 4 new mails" color="inherit">
+                            <a href='https://github.com/A-Rehman01/shoes-store-app' target="_blank" rel="noopener noreferrer"> <GitHubIcon className="iconDesktop" style={{ fontSize: '27' }} /></a>
+                        </IconButton>
+
+
+                                            </div>
                     <div className={classes.sectionMobile}>
                         <IconButton
                             aria-label="show more"
